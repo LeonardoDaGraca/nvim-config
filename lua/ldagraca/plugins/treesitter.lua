@@ -27,6 +27,7 @@ return {
       "query",
       "vimdoc",
       "c",
+      "go",
     })
 
     require("nvim-ts-autotag").setup()

@@ -19,6 +19,7 @@ return {
 				liquid = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				go = { "goimports" },
 				c = {}, -- explicitly set no formatters for C files
 				h = {}, -- explicitly set no formatters for header files
 			},

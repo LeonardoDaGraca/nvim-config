@@ -39,7 +39,7 @@ return {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
 				local client = vim.lsp.get_client_by_id(ev.data.client_id)
-				if client then
+				if client and client.name ~= "gopls" then
 					client.server_capabilities.semanticTokensProvider = nil
 				end
 
