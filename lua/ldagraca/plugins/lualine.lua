@@ -16,6 +16,15 @@ return {
             cond = lazy_status.has_updates,
             color = { fg = "#ff9e64" },
           },
+          {
+            function()
+              return require("herdr-nvim").statusline()
+            end,
+            cond = function()
+              local ok, herdr = pcall(require, "herdr-nvim")
+              return ok and herdr.statusline() ~= ""
+            end,
+          },
           { "encoding" },
           { "fileformat" },
           { "filetype" },
